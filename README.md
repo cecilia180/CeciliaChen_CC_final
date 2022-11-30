@@ -1,2 +1,2 @@
-# cecilia-final
+# CC finalproject_Cecilia
 this is my final
