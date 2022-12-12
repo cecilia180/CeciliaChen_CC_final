@@ -31,11 +31,10 @@ class cat{
   }
   
   addScore(obstacle){                                              //def score
-    if((obstacle.x+obstacle.w<this.xpos)&&(obstacle.score==0)&&(cld==0)){ //障碍物的右侧部分在恐龙的左边，并且恐龙之前没有经过这个障碍物，并且没有发生碰撞
-      obstacle.score=1;                                          //使障碍物的分数为1，已经经过障碍物，不再继续得分
+    if((obstacle.x+obstacle.w<this.xpos)&&(obstacle.score==0)&&(cld==0)){ //The right part of the obstacle is to the left of cat, and cat has not passed this obstacle before, and there is no collision
+      obstacle.score=1;                                          
       score+=1; 
     }   
   }
   
 }
- 
