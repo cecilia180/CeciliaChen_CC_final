@@ -12,7 +12,7 @@ function setup() {
   mic = new p5.AudioIn();
   mic.start();
   gameSpeed = 1;
-  maxMicLevel = 0.5;//maxMicLevel控制麦克风接受到音量传递给cat的最大值
+  maxMicLevel = 0.5;//maxMicLevel Control the microphone to receive the maximum volume transmitted to cat
 }
  
 function draw() {        
@@ -23,7 +23,7 @@ function draw() {
   cat.show();     
   
   if(frameCount % 150 == 0){
-    gameSpeed += 0.1;//gameSpeed为场景移动的乘数
+    gameSpeed += 0.1;//gameSpeed = the multiplier of scene movement
   }
   
   micLevel = constrain(mic.getLevel(), 0, maxMicLevel);
@@ -31,7 +31,7 @@ function draw() {
   
   //use sudio reference: https://p5js.org/reference/#/p5.AudioIn
   //jump
-  if(micLevel >= 0.1){
+  if(micLevel >= 0.01){
     cat.jump(micLevel);
   }
   
@@ -59,9 +59,8 @@ function draw() {
 function printScore() {           
    textAlign(LEFT);                
    fill(50);                       
-   textSize(30);                   //设置字体大小
-   text("your score: "+score, 5*width/7, height/10); //输出得分，设置文本的位置
+   textSize(30);                   
+   text("your score: "+score, 5*width/7, height/10); 
  } 
 
  
-
